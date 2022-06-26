@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML dynamisch generieren</title>
+    <script src="script/main.js">
+    </script>
+  </head>
+  <body>
+    <form name="form1" onsubmit="addEntry()">
+      <fieldset>
+        <legend>Personeneingabe
+        </legend>
+        <label>Vorname
+          <input name="firstName">
+          </input>
+        </label><br />
+        <label>Nachname
+          <input name="lastName">
+          </input>
+        </label><br />
+        <label>Position
+          <input name="position">
+          </input>
+        </label><br />
+        <button type="button" onclick="addEntry()">OK
+        </button>
+      </fieldset>
+    </form>
+    <div id=table_head>
+    </div>
+  </body>
+</html>
