@@ -1,6 +1,6 @@
 const persons = [
-		{
-				firstName: 'Max',
+    {
+        firstName: 'Max',
         lastName: 'Mustermann',
         position: 'CTO'
     },
@@ -22,25 +22,17 @@ function createTable(persoons) {
     const thead = document.createElement('thead');
     thead.innerHTML = '<tr><th>Vorname</th><th>Nachname</th><th>Position</th>';
     const tbody = document.createElement('tbody');
-		tbody.id = "table_body"
-    for(let i=0; i<persons.length;i++) {
-        const person = persons[i];
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>
-            ${person.firstName}
-          </td>
-          <td>
-            ${person.lastName}
-          </td>
-          <td>
-            ${person.position}
-          </td>    `
-				tbody.appendChild(tr);
-    }
+        tbody.id = "table_body"
     table.appendChild(thead);
     table.appendChild(tbody);
     div_element.appendChild(table);
+
+    for(let i=0; i<persons.length;i++) {
+        const person = persons[i];
+        addToTable( person.firstName,
+                    person.lastName,
+                    person.position);
+    }
 }
 
 function addToTable(firstName,lastName,position) 
@@ -64,9 +56,9 @@ function addEntry() {
     form = document.form1;
     let firstName = form.firstName.value;
     let lastName  = form.lastName.value;
-		let position  = form.position.value;
-		console.log(firstName);
-		addToTable(firstName,lastName,position);
+    let position  = form.position.value;
+    console.log(firstName);
+    addToTable(firstName,lastName,position);
 }
 
 // Registrierung des Eventlisteners
