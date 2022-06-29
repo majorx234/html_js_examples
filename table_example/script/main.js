@@ -16,7 +16,7 @@ const persons = [
     }
 ];  
 
-function createTable(persoons) {
+function createTable(persons) {
     const div_element = document.getElementById('table_head');
     const table = document.createElement('table');
     const thead = document.createElement('thead');
